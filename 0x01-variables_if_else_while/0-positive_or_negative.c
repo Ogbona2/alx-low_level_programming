@@ -1,33 +1,27 @@
-#include <stdio.h>
+
 #include <stdlib.h>
-#include <ttime.h>
+#include <time.h>
+#include <stdio.h>
 
 /**
- * main - main function to generate a random number
+ * main - Prints a random number and states whether
+ *        it is positive, negative, or zero.
  *
- * Return: Always 0 (Success)
- *
- */
-
+ * Return: Always 0.
+*/
 int main(void)
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
 	if (n > 0)
-	{
-	
- 		printf("%
-				positive\n", n);
-	}
-	esle if (n == 0)
-	{
+		printf("%d is positive\n", n);
+	else if (n < 0)
+		printf("%d is negative\n", n);
+	else
 		printf("%d is zero\n", n);
-	}
-	esle if (n < 0)
-	{
-		printf("%d is negative\n" n);
-	}
-	Return (0);
+
+	return (0);
 }
